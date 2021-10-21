@@ -1,0 +1,6 @@
+#!/bin/bash
+if cat /sys/class/power_supply/BAT0/status | grep -q 'Discharging'; then
+	   echo "-"
+   else
+	   echo "+"
+fi

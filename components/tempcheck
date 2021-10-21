@@ -1,0 +1,4 @@
+#!/bin/sh
+
+sensors | awk '/^Core 1:/ {print $3,$4}'
+

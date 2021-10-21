@@ -1,0 +1,8 @@
+#!/bin/bash
+if pacmd dump | awk '/^set-sink-mute/ {print $3}' | grep -q 'yes'; then
+	echo "Muted"
+
+else	pactl list sinks | awk '/\tVolume:/ {print $5}'
+
+fi
+

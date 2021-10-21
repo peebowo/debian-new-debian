@@ -1,0 +1,15 @@
+#!/bin/bash
+currenttime=$(date +%R)
+       if [[ "$currenttime" < "09:15" ]] || [[ "$currenttime" < "08:45" ]]; then
+		echo "1st block" 
+	elif [[ "$currenttime" < "10:50" ]] || [[ "$currenttime" < "09:20" ]]; then
+		echo "2nd block"
+	elif [[ "$currenttime" < "12:30" ]] || [[ "$currenttime" < "11:55" ]]; then
+		echo "Lunch"
+	elif [[ "$currenttime" < "14:35" ]] || [[ "$currenttime" < "13:05" ]]; then
+		echo "3rd block"
+	elif [[ "$currenttime" < "16:15" ]] || [[ "$currenttime" < "14:40" ]]; then
+		echo "Last block!"	
+else echo "Break/End"
+       fi
+
